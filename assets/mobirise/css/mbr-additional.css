@@ -778,8 +778,17 @@ a {
     padding-right: 16px;
   }
 }
+.cid-uehDAVAu4L {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-image: url("../../../assets/images/mbr.webp");
+  overflow: hidden;
+}
+.cid-uehDAVAu4L .media-container-row .mbr-text {
+  color: #000000;
+}
 .cid-uehpHuTNda {
-  background-image: url("../../../assets/images/background1.jpg");
+  background-image: url("../../../assets/images/mbr.webp");
 }
 .cid-uehpHuTNda .mbr-fallback-image.disabled {
   display: none;
