@@ -113,6 +113,7 @@
                             <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="email">
                                 <input type="email" name="email" placeholder="E-mail" data-form-field="email" class="form-control" value="" id="email-form03-29">
                             </div>
+                            <p id="error-message" style="color: red; display: none;"> Voer de juiste waarde in.</p>
                             <div class="col-12 form-group mb-3 mb-3" data-for="phone">
                                 <input type="tel" name="phone" placeholder="Wat is 1+1? (verificatie vraag)" data-form-field="phone" class="form-control" value="" id="phone-form03-29">
                             </div>
@@ -124,7 +125,7 @@
                         </div>
                     <span class="gdpr-block">
 <label>
-<span class="textGDPR display-7" style="color: #a7a7a7"><input type="checkbox" name="gdpr" id="gdpr-form03-29" required="">By continuing you agree to our <a style="color: #149dcc; text-decoration: none;" href="./tos">Terms of Service</a> and <a style="color: #149dcc; text-decoration: none;" href="./privacy">Privacy Policy</a>.</span>
+<span class="textGDPR display-7" style="color: #a7a7a7"><input type="checkbox" name="gdpr" id="gdpr-form03-29" required="">Als u doorgaat, gaat u akkoord met onze <a style="color: #149dcc; text-decoration: none;" href="./tos">Algemene Voorwaarden</a> en <a style="color: #149dcc; text-decoration: none;" href="./privacy">Privacybeleid</a>.</span>
 </label>
 </span></form>
                 </div>
@@ -143,7 +144,29 @@
 
 <section data-bs-version="5.1" class="footer2 cid-udYqHmpIjN" once="footers" id="footer02-1v">
     
+<script>
+        document.getElementById('button').addEventListener('click', function(event) {
 
+var inputValue = document.getElementById('phone-form03-29').value;
+
+var errorMessage = document.getElementById('error-message');
+
+if (inputValue !== '2') {
+
+    event.preventDefault(); // Prevent form submission
+
+    errorMessage.style.display = 'block'; // Show error message
+
+} else {
+
+    errorMessage.style.display = 'none'; // Hide error message
+
+    // Form will be submitted as normal
+
+}
+
+});
+</script>
     
     
 
